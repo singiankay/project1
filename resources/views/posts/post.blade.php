@@ -1,17 +1,13 @@
 <div class="box">
 	<article class="media">
-		<div class="media-left">
-			<figure class="image is-64x64">
-				<img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
-			</figure>
-		</div>
 		<div class="media-content">
 			<div class="content">
+				<h2 class="title"><a href="/posts/{{ $post->id }}" class="has-text-black">{{ title_case($post->title) }}</a></h2>
+				<p>{{ $post->body }}</p>
 				<p>
-					<a href="/posts/{{ $post->id }}" class="has-text-black"><strong>{{ title_case($post->title) }}</strong></a>
+					<strong>{{ $post->user->name }}</strong>
 					<small>{{ $post->created_at->diffForHumans() }}</small>
 				</p>
-				<p>{{ $post->body }}</p>
 				<nav class="level is-mobile">
 					<div class="level-left">
 						<a class="level-item" aria-label="reply">
@@ -35,3 +31,4 @@
 		</div>
 	</article>
 </div>
+
