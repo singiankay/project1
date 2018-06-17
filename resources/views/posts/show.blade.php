@@ -14,6 +14,7 @@
 				<div class="media-content">
 					<div class="content">
 						<p>
+							{{-- <strong><a href="#">{{ $user->name }}</a></strong> --}}
 							<strong><a href="#">User</a></strong>
 						</p>
 						<p>
