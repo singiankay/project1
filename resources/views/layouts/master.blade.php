@@ -9,7 +9,9 @@
 </head>
 <body>
 	@include('layouts.nav')
-	@yield('content')	
+	@include('layouts.sidebar_wrapper')
+		@yield('content')	
+	@include('layouts.sidebar')
 	@include('layouts.footer')
 </body>
 </html>

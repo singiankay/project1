@@ -32,7 +32,7 @@ class User extends Authenticatable
         return $this->hasMany(Post::class);
     }
 
-    public function publish(POST $post)
+    public function publish(Post $post)
     {
          // save() accepts a full Eloquent model instance se we use it instead of create. Since Post insantiates with an already set user_id, it will automatically create the user id here.
         $this->posts()->save($post);

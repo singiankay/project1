@@ -22,7 +22,8 @@ class RegistrationController extends Controller
     	]);
 
     	// Create and save the user
-    	$user = User::create(request(['name', 'email', 'password']));
+    	// $user = User::create(request(['name', 'email', 'password']));
+        
         $user = User::create([
             'name' => request('name'),
             'email' => request('email'),

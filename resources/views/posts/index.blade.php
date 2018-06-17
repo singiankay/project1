@@ -1,20 +1,10 @@
 @extends('layouts.master')
 
 @section('content')
-	<section class="section">
-		<div class="container">
-			<div class="columns">
-				<div class="column">
-					@foreach ($posts as $post)
-						@include('posts.post')	
-					@endforeach
-				</div>
-				<div class="column is-one-quarter">
-					@include('posts.archives')
-				</div>
-			</div>
-		</div>
-	</section>
+	<h1 class="title">Blog Post</h1>
+	@foreach ($posts as $post)
+		@include('posts.post')	
+	@endforeach
 @endsection
 
 @section('footer')
